@@ -1,0 +1,10 @@
+<input type="button" value="Search" (click)="search()">
+
+<form>
+  <div class="form-group">
+      <input type="text" class="form-control" placeholder="Enter Ticker" [(ngModel)]="coinname" name="coinname" (click)="search()">    
+  </div>    
+</form>    
+<div>
+  {{details.name}}
+</div>
