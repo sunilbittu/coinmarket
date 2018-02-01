@@ -8,21 +8,16 @@ import { SearchService } from '../../service/search.service';
 export class SearchComponent implements OnInit {
   public name: any;
   public coinname: any;
-  public details: { [key: string]: any } = {
-  };
+  public details= [];
   constructor(private searchService: SearchService) {
 
     console.log('Search component Init');
   }
   ngOnInit() {
     this.searchService.getTop100().subscribe((result: any) => {
-
+      
       this.details = result;
-      result.map(item => {
-        console.log(JSON.stringify(result));
-        this.name = item.name ;
-      });
-      console.log(JSON.stringify(this.name));
+      alert(JSON.stringify(this.details));
     });
   }
   search() {

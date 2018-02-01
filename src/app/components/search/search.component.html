@@ -5,6 +5,6 @@
       <input type="text" class="form-control" placeholder="Enter Ticker" [(ngModel)]="coinname" name="coinname" (click)="search()">    
   </div>    
 </form>    
-<div>
-  {{details.name}}
+<div *ngFor ="let item of details">{{item.name}}
+ 
 </div>
